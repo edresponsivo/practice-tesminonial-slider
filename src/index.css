@@ -1,0 +1,118 @@
+/* reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 16px;
+}
+main {
+  width: 90vw;
+  margin: 5rem;
+}
+
+.title {
+  margin: 2rem;
+  text-align: center;
+  padding: 2rem;
+}
+
+.section-center {
+  display: flex;
+  place-items: center;
+  position: relative;
+  /* border: 1px solid red; */
+  height: 240px;
+  width: 80vw;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.testimonial-container {
+  /* border: 1px solid green; */
+  width: 700px;
+  height: 100%;
+  display: flex;
+  /* gap: 1rem; */
+  padding: 0;
+  margin: 0 auto;
+}
+article {
+  display: flex;
+  /* border: 1px solid orange; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.photo {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-left: 4rem;
+  margin-top: 1rem;
+}
+.people-info {
+  padding: 1rem;
+}
+.person-quote {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  color: rgb(96, 94, 94);
+  margin-bottom: 1.2rem;
+}
+.person-name,
+.person-title {
+  color: rgb(96, 94, 94);
+  margin-bottom: 1rem;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 100px;
+  width: 2.2rem;
+  height: 2.2rem;
+  cursor: pointer;
+  background-color: rgba(244, 249, 249, 0.2);
+  border: 0;
+  border-radius: 5px;
+}
+.prev:hover,
+.next:hover {
+  background-color: rgba(220, 223, 226, 0.8);
+}
+.prev {
+  left: 0;
+}
+.next {
+  right: 0;
+}
+.fa-icon {
+  color: rgb(44, 131, 198);
+  font-size: 2.2rem;
+}
+.dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  color: rgb(44, 131, 198);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+article.activeSlide {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  article.lastSlide {
+    transform: translateX(-100%);
+  }
+  article.nextSlide {
+    transform: translateX(100%);
+  }
